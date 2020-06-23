@@ -3,7 +3,7 @@
     "windowsAuthentication": false, 
     "anonymousAuthentication": true, 
     "iisExpress": {
-      "applicationUrl": "http://localhost:49175",
+      "applicationUrl": "http://localhost:19779",
       "sslPort": 0
     }
   },
@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Lumia": {
+    "Presentation": {
       "commandName": "Project",
       "launchBrowser": true,
       "applicationUrl": "http://localhost:5000",
