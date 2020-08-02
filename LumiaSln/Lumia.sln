@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Presentation", "1. Presentation", "{FEA99787-99EE-4045-B259-443B5EDFAFF5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Application", "3. Application", "{B56B8DB7-7D78-43B9-B87F-BEFC5A515FE9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Domain", "4. Domain", "{F9050204-8D50-4492-88CC-DB69286BAE50}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Service", "2. Service", "{9E93B348-18BE-4AAE-8102-02506523CF18}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Common", "5. Common", "{3410EFD9-8BDB-4AA9-AB47-DD1A4EFF3C9D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6. Persistence", "6. Persistence", "{5E1F6D77-7545-4228-8C43-808CFF935751}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7. Infrastructure", "7. Infrastructure", "{BE6EE165-D441-4211-8D17-896A1111891C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "8. Tests", "8. Tests", "{09F71128-07E7-4783-B9CD-B40B24FC16BD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lumia.Domain", "src\Lumia.Domain\Lumia.Domain.csproj", "{BBF16C1F-90ED-4978-900C-53B4EE2D4C22}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lumia.Domain.UnitTests", "tests\Lumia.Domain.Test\Lumia.Domain.UnitTests.csproj", "{D68298F3-0B10-4FFF-8FD3-ED7A42BF69AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lumia.Application", "src\Lumia.Application\Lumia.Application.csproj", "{BF91F117-B5D5-458D-833F-D115F8B814FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lumia.Application.UnitTests", "tests\Lumia.Application.UnitTests\Lumia.Application.UnitTests.csproj", "{8DA0D4B1-A2C6-4164-BF6B-9445CE9CB178}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lumia.Common", "src\Lumia.Common\Lumia.Common.csproj", "{3332CB23-E1DE-4D2D-8A6B-D48133D708F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBF16C1F-90ED-4978-900C-53B4EE2D4C22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBF16C1F-90ED-4978-900C-53B4EE2D4C22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBF16C1F-90ED-4978-900C-53B4EE2D4C22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBF16C1F-90ED-4978-900C-53B4EE2D4C22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D68298F3-0B10-4FFF-8FD3-ED7A42BF69AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D68298F3-0B10-4FFF-8FD3-ED7A42BF69AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D68298F3-0B10-4FFF-8FD3-ED7A42BF69AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D68298F3-0B10-4FFF-8FD3-ED7A42BF69AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF91F117-B5D5-458D-833F-D115F8B814FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF91F117-B5D5-458D-833F-D115F8B814FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF91F117-B5D5-458D-833F-D115F8B814FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF91F117-B5D5-458D-833F-D115F8B814FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DA0D4B1-A2C6-4164-BF6B-9445CE9CB178}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DA0D4B1-A2C6-4164-BF6B-9445CE9CB178}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DA0D4B1-A2C6-4164-BF6B-9445CE9CB178}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DA0D4B1-A2C6-4164-BF6B-9445CE9CB178}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3332CB23-E1DE-4D2D-8A6B-D48133D708F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3332CB23-E1DE-4D2D-8A6B-D48133D708F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3332CB23-E1DE-4D2D-8A6B-D48133D708F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3332CB23-E1DE-4D2D-8A6B-D48133D708F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BBF16C1F-90ED-4978-900C-53B4EE2D4C22} = {F9050204-8D50-4492-88CC-DB69286BAE50}
+		{D68298F3-0B10-4FFF-8FD3-ED7A42BF69AA} = {09F71128-07E7-4783-B9CD-B40B24FC16BD}
+		{BF91F117-B5D5-458D-833F-D115F8B814FC} = {B56B8DB7-7D78-43B9-B87F-BEFC5A515FE9}
+		{8DA0D4B1-A2C6-4164-BF6B-9445CE9CB178} = {09F71128-07E7-4783-B9CD-B40B24FC16BD}
+		{3332CB23-E1DE-4D2D-8A6B-D48133D708F3} = {3410EFD9-8BDB-4AA9-AB47-DD1A4EFF3C9D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C0BB3CF1-DA7C-4CC4-BC1A-C013914AE9DF}
+	EndGlobalSection
+EndGlobal
