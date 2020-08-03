@@ -23,11 +23,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lumia.Domain", "src\Lumia.D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lumia.Domain.UnitTests", "tests\Lumia.Domain.Test\Lumia.Domain.UnitTests.csproj", "{D68298F3-0B10-4FFF-8FD3-ED7A42BF69AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lumia.Application", "src\Lumia.Application\Lumia.Application.csproj", "{BF91F117-B5D5-458D-833F-D115F8B814FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lumia.Application", "src\Lumia.Application\Lumia.Application.csproj", "{BF91F117-B5D5-458D-833F-D115F8B814FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lumia.Application.UnitTests", "tests\Lumia.Application.UnitTests\Lumia.Application.UnitTests.csproj", "{8DA0D4B1-A2C6-4164-BF6B-9445CE9CB178}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lumia.Application.UnitTests", "tests\Lumia.Application.UnitTests\Lumia.Application.UnitTests.csproj", "{8DA0D4B1-A2C6-4164-BF6B-9445CE9CB178}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lumia.Common", "src\Lumia.Common\Lumia.Common.csproj", "{3332CB23-E1DE-4D2D-8A6B-D48133D708F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lumia.Common", "src\Lumia.Common\Lumia.Common.csproj", "{3332CB23-E1DE-4D2D-8A6B-D48133D708F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lumia.Persistence", "src\Lumia.Persistence\Lumia.Persistence.csproj", "{9F83413A-D5BB-4DAB-AEF6-D1C45EE3333A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{3332CB23-E1DE-4D2D-8A6B-D48133D708F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3332CB23-E1DE-4D2D-8A6B-D48133D708F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3332CB23-E1DE-4D2D-8A6B-D48133D708F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F83413A-D5BB-4DAB-AEF6-D1C45EE3333A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F83413A-D5BB-4DAB-AEF6-D1C45EE3333A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F83413A-D5BB-4DAB-AEF6-D1C45EE3333A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F83413A-D5BB-4DAB-AEF6-D1C45EE3333A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,6 +71,7 @@ Global
 		{BF91F117-B5D5-458D-833F-D115F8B814FC} = {B56B8DB7-7D78-43B9-B87F-BEFC5A515FE9}
 		{8DA0D4B1-A2C6-4164-BF6B-9445CE9CB178} = {09F71128-07E7-4783-B9CD-B40B24FC16BD}
 		{3332CB23-E1DE-4D2D-8A6B-D48133D708F3} = {3410EFD9-8BDB-4AA9-AB47-DD1A4EFF3C9D}
+		{9F83413A-D5BB-4DAB-AEF6-D1C45EE3333A} = {5E1F6D77-7545-4228-8C43-808CFF935751}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C0BB3CF1-DA7C-4CC4-BC1A-C013914AE9DF}
