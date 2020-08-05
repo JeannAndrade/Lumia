@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Lumia.Application.Clientes.Queries.GetClienteList
 {
-    public interface IGetClienteListQuery
+    public interface IGetClientesListQuery
     {
         List<ClienteModel> Execute();
     }

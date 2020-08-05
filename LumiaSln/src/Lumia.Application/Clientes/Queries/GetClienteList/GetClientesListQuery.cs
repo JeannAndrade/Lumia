@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Lumia.Application.Clientes.Queries.GetClienteList
 {
-    public class GetClientesListQuery : IGetClienteListQuery
+    public class GetClientesListQuery : IGetClientesListQuery
     {
         private readonly IDatabaseService _database;
 

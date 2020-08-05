@@ -1,5 +1,4 @@
 ﻿using Lumia.Domain.Clientes;
-using Lumia.Persistence.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -8,33 +7,23 @@ using System.Text;
 
 namespace Lumia.Persistence.Mappings
 {
-    public class ClienteMapping : EntityTypeConfiguration<Cliente>
+    public class ClienteMapping : IEntityTypeConfiguration<Cliente>
     {
-        public override void Map(EntityTypeBuilder<Cliente> builder)
+        public void Configure(EntityTypeBuilder<Cliente> builder)
         {
-            builder.Property(e => e.Nome)
-               .HasColumnType("varchar(150)")
-               .IsRequired();
-
-            builder.Property(e => e.Email)
-                .HasColumnType("varchar(150)");
-
-            builder.Property(e => e.Endereco)
-                .HasColumnType("varchar(250)");
-
-            builder.Property(e => e.Telefone)
-                .HasColumnType("varchar(15)");
-
-            builder.Property(e => e.Observacao)
-                .HasColumnType("varchar(1000)");
+            builder.ToTable("Clientes");
+            builder.HasKey(k => k.Id);
+            builder.Property(e => e.Nome).HasMaxLength(150).IsRequired();
+            builder.Property(e => e.Email).HasMaxLength(150);
+            builder.Property(e => e.Endereco).HasMaxLength(250);
+            builder.Property(e => e.Telefone).HasMaxLength(15);
+            builder.Property(e => e.Observacao).HasMaxLength(1000);
 
             //builder.Ignore(e => e.ValidationResult);
 
             //builder.Ignore(e => e.Tags);
 
             //builder.Ignore(e => e.CascadeMode);
-
-            //builder.ToTable("Eventos");
 
             //builder.HasOne(e => e.Organizador)
             //    .WithMany(o => o.Eventos)

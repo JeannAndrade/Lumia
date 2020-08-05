@@ -8,6 +8,6 @@ namespace Lumia.Application.Interfaces
 {
     public interface IDatabaseService
     {
-        IQueryable<Cliente> Clientes { get; set; }
+        IQueryable<Cliente> Clientes { get; }
     }
 }
