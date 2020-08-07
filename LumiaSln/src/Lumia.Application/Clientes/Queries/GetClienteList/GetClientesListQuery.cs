@@ -15,7 +15,7 @@ namespace Lumia.Application.Clientes.Queries.GetClienteList
             _database = database ?? throw new ArgumentNullException(nameof(database));
         }
 
-        public List<ClienteModel> Execute()
+        public IEnumerable<ClienteModel> Execute()
         {
             var customers = _database.Clientes
                .Select(p => new ClienteModel()

@@ -6,6 +6,6 @@ namespace Lumia.Application.Clientes.Queries.GetClienteList
 {
     public interface IGetClientesListQuery
     {
-        List<ClienteModel> Execute();
+        IEnumerable<ClienteModel> Execute();
     }
 }

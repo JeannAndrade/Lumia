@@ -30,18 +30,7 @@ namespace Lumia.Presentation.AspNetMvc
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-
-            services.Configure<RazorViewEngineOptions>(o =>
-            {
-                o.ViewLocationFormats.Clear();
-                o.ViewLocationFormats.Add("/{1}/Views/{0}" + RazorViewEngine.ViewExtension);
-                o.ViewLocationFormats.Add("/Shared/Views/{0}" + RazorViewEngine.ViewExtension);
-            });
-
-            services.AddDbContext<LumiaDbContext>(opts => {
-                opts.UseSqlServer(Configuration["ConnectionStrings:LumiaConnection"]);
-            });
-
+            services.AddDbContext<LumiaDbContext>(opts => opts.UseSqlServer(Configuration["ConnectionStrings:LumiaConnection"]));
             services.AddScoped<IGetClientesListQuery, GetClientesListQuery>();
             services.AddScoped<IDatabaseService, DatabaseService>();
         }
