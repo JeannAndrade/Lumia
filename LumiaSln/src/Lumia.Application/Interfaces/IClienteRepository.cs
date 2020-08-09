@@ -1,13 +1,11 @@
 ﻿using Lumia.Domain.Clientes;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace Lumia.Application.Interfaces
 {
-    public interface IDatabaseService
+    public interface IClienteRepository : IRepository<Cliente>
     {
-        IQueryable<Cliente> Clientes { get; }
     }
 }

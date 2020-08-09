@@ -13,6 +13,12 @@ using Microsoft.EntityFrameworkCore;
 using Lumia.Persistence.Context;
 using Lumia.Application.Interfaces;
 using Lumia.Application.Clientes.Queries.GetClienteList;
+using Lumia.Persistence.Repositories;
+using Lumia.Application.Mappings;
+using AutoMapper;
+using Lumia.Presentation.AspNetMvc.Services;
+using Lumia.Application.Clientes.Commands.CreateCliente;
+using Lumia.Application.Clientes.Commands.CreateCliente.Factory;
 
 namespace Lumia.Presentation.AspNetMvc
 {
@@ -32,7 +38,13 @@ namespace Lumia.Presentation.AspNetMvc
             services.AddControllersWithViews();
             services.AddDbContext<LumiaDbContext>(opts => opts.UseSqlServer(Configuration["ConnectionStrings:LumiaConnection"]));
             services.AddScoped<IGetClientesListQuery, GetClientesListQuery>();
-            services.AddScoped<IDatabaseService, DatabaseService>();
+            services.AddScoped<ICreateClienteViewModelFactory, CreateClienteViewModelFactory>();
+            services.AddScoped<ICreateClienteCommand, CreateClienteCommand>();
+            services.AddScoped<IClienteFactory, ClienteFactory>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            IMapper mapper = AutoMapperConfiguration.CreateMapper();
+            services.AddSingleton(mapper);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

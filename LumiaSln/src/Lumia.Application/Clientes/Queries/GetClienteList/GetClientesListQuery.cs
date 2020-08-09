@@ -1,4 +1,7 @@
-﻿using Lumia.Application.Interfaces;
+﻿using AutoMapper;
+using Lumia.Application.Interfaces;
+using Lumia.Domain.Clientes;
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,27 +11,20 @@ namespace Lumia.Application.Clientes.Queries.GetClienteList
 {
     public class GetClientesListQuery : IGetClientesListQuery
     {
-        private readonly IDatabaseService _database;
+        private readonly IUnitOfWork _uow;
+        private readonly IMapper _mapper;
 
-        public GetClientesListQuery(IDatabaseService database)
+        public GetClientesListQuery(IUnitOfWork uow, IMapper mapper)
         {
-            _database = database ?? throw new ArgumentNullException(nameof(database));
+            _uow = uow ?? throw new ArgumentNullException(nameof(uow));
+            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
 
         public IEnumerable<ClienteModel> Execute()
         {
-            var customers = _database.Clientes
-               .Select(p => new ClienteModel()
-               {
-                   Id = p.Id,
-                   Nome = p.Nome,
-                   Email = p.Email,
-                   Endereco = p.Endereco,
-                   Telefone = p.Telefone,
-                   Observacao = p.Observacao
-               });
+            IEnumerable<Cliente> clientes = _uow.Clientes.GetAll();
 
-            return customers.ToList();
+            return _mapper.Map<IEnumerable<Cliente>, IEnumerable<ClienteModel>>(clientes);
         }
     }
 }

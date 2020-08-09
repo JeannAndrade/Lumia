@@ -8,4 +8,8 @@
     <ProjectReference Include="..\Lumia.Domain\Lumia.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
+  </ItemGroup>
+
 </Project>

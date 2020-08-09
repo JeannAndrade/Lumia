@@ -1,0 +1,33 @@
+﻿@model Lumia.Presentation.AspNetMvc.Models.CreateClienteViewModel
+
+@{
+    ViewBag.Title = "Criando cliente";
+}
+
+<h2>Novo cliente</h2>
+<p>Preencha o formulário corretamente para tirar proveito do cadastro futuramente!</p>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" class="form-control" asp-for="Cliente.Nome" id="nome" required>
+    </div>
+    <div class="form-group">
+        <label for="email">e-Mail</label>
+        <input type="email" class="form-control" asp-for="Cliente.Email" id="email" aria-describedby="emailHelp">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">        
+        <label for="telefone">Telefone</label>
+        <input type="tel" class="form-control" asp-for="Cliente.Telefone" id="telefone">
+    </div>
+    <div class="form-group">
+        <label for="endereco">Endereço</label>
+        <input type="text" class="form-control" asp-for="Cliente.Endereco" id="endereco">
+    </div>
+    <div class="form-group">
+        <label for="observacao">Observação</label>
+        <textarea type="text" class="form-control" asp-for="Cliente.Observacao" id="observacao"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
